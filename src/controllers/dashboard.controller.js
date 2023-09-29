@@ -15,8 +15,11 @@ const returnDadosTabelasDashboard = async(req , res) =>{
 }
 
 const procurador = async(req , res) =>{
-  console.log(req)
-  return {"httpResponse" : "ok", "htppStatus" : 200 }
+  
+  let ipCliente = req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
+  console.log(ipCliente)
+
+  return {httpResponse : "ok", htppStatus : 200 }
 }
 
 async function getDadosTabelasDashboard(usuarios, cd_cliente) {
