@@ -14,14 +14,6 @@ const returnDadosTabelasDashboard = async(req , res) =>{
   }
 }
 
-const procurador = async(req , res) =>{
-  
-  let ipCliente = req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
-  console.log(ipCliente)
-
-  return {httpResponse : "ok", htppStatus : 200 }
-}
-
 async function getDadosTabelasDashboard(usuarios, cd_cliente) {
   const dadosTabelaEmpresasVisualizadas = await platAdminAccess.ultimasEmpresasVisualizadas({cdCliente: cd_cliente, nmUsuario: usuarios, periodo: 90});
   const dadosTabelaEmpresasExportadas = await platAdminAccess.ultimasExportacoesRealizadas({cdCliente: cd_cliente, nmUsuario: usuarios, periodo: 90});
