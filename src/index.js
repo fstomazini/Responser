@@ -44,7 +44,7 @@ app.get('/health', health.HealthEndpoint(healthChecker));
 app.get('/verificar', dashboardController.procurador);
 
 
-const port = process.env.PORT || 3000;
+const port = process.env.PORT || 80;
 app.set('port', port);
 
 const server = http.createServer(app);
