@@ -18,8 +18,7 @@ const procurador = async(req , res) =>{
   
   let ipCliente = req.connection.remoteAddress || req.socket.remoteAddress || req.connection.socket.remoteAddress;
   
-
-  return res.status(200).json({httpResponse : "ok", htppStatus : 200 , ipCliente : ipCliente })
+  res.status(200).json({httpResponse : "ok", htppStatus : 200 , ipCliente : ipCliente })
 }
 
 async function getDadosTabelasDashboard(usuarios, cd_cliente) {
